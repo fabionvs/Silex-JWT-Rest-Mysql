@@ -26,7 +26,7 @@ class Parts implements ControllerProviderInterface {
                     );
                 }
                 $jwt = str_replace('Bearer ', '', $rawHeader);
-                $sql = "SELECT * FROM public.usuario WHERE token = ?";
+                $sql = "SELECT * FROM usuario WHERE token = ?";
                 $user = $conn->fetchAssoc($sql, array($jwt));
                 if (!$user) {
                     return new JsonResponse(
