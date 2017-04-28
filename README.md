@@ -6,6 +6,9 @@ Abra o arquivo "fabio.sql" e rode em seu banco de dados.
 
 Altere as configurações do banco no arquivo app/config/parameters.yml
 
+Instale as dependências
+- php composer.phar install
+
 Para acessar a aplicação, basta colocar o projeto em uma pasta desejada, acessar a pasta "/web" e rodar o comando:
 - php -S localhost:8000
 
