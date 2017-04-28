@@ -25,10 +25,10 @@ Carros:
 - Deletar: /api/v1/cars/{id} (delete)
 
 Parts:
-- Partes/carro:  /api/v1/parts/{carro} (get) {carro} = Id do carro
-- Inserir:  /api/v1/parts/new/{carro} (post) {carro} = Id do carro
-- Editar: /api/v1/parts/edit/{id} } (post) {id} = Id da part
-- Delete: /api/v1/parts/{id} (delete) {id} = Id da part
+- Partes/carro:  /api/v1/parts/{carro} - (get) {carro} = Id do carro
+- Inserir:  /api/v1/parts/new/{carro} - (post) {carro} = Id do carro
+- Editar: /api/v1/parts/edit/{id} } - (post) {id} = Id da part
+- Delete: /api/v1/parts/{id} - (delete) {id} = Id da part
 
 Exemplo: http://localhost:8000/api/v1/cars
 
