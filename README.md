@@ -16,7 +16,7 @@ Após rodar o comando, acesse o endereço localhost:8000 no seu navegador. Irá 
 
 Endereços para o Rest:
 
-Login: api/v1/login?user=fabio&pass=123
+Login: http://localhost:8000/api/v1/login?user=fabio&pass=123
 
 Carros:
 - Listar: /api/v1/cars/ (get) 
