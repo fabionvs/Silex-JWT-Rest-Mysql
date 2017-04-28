@@ -1,31 +1,21 @@
 
-CREATE SEQUENCE car_sequence
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+CREATE SEQUENCE car_sequence;
 
 
 
 CREATE TABLE car (
-    parent_id integer DEFAULT nextval('car_sequence'::regclass) NOT NULL,
+    parent_id integer DEFAULT nextval('car_sequence') NOT NULL,
     nome character varying(80) NOT NULL,
     ano character varying(4) NOT NULL,
     aro integer NOT NULL
 );
 
 
-CREATE SEQUENCE parts_sequence
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+CREATE SEQUENCE parts_sequence;
 
 
 CREATE TABLE parts (
-    part_id integer DEFAULT nextval('parts_sequence'::regclass) NOT NULL,
+    part_id integer DEFAULT nextval('parts_sequence') NOT NULL,
     car_id integer NOT NULL,
     nome character varying(80) NOT NULL,
     opcional integer NOT NULL
