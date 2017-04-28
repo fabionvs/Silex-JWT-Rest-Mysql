@@ -3,7 +3,7 @@ Projeto
 Instalação
 ------------
 Para acessar a aplicação, basta colocar o projeto em uma pasta desejada, acessar a pasta "/web" e rodar o comando:
-php -S localhost:8000
+- php -S localhost:8000
 
 Após rodar o comando, acesse o endereço localhost:8000 no seu navegador. Irá abrir o front-end que foi criado para testar.
 
