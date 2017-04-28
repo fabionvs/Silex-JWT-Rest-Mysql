@@ -23,7 +23,7 @@ Parts:
 - Editar: /api/v1/parts/edit/{id} } (post) {id} = Id da part
 - Delete: /api/v1/parts/{id} (delete) {id} = Id da part
 
-Exemplo: localhost:8000/api/v1/cars
+Exemplo: http://localhost:8000/api/v1/cars
 
 Se for utilizar via Postman, ou algum cliente Rest, lembre-se de usar o header:
 "Autorization" "Bearer <token>"
