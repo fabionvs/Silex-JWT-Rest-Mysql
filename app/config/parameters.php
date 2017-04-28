@@ -1,12 +1,12 @@
 <?php
 
 // PARAMETERS
-$app['driver'] = 'pdo_pgsql';
+$app['driver'] = 'pdo_mysql';
 $app['host'] = '127.0.0.1';
-$app['port'] = '5432';
-$app['dbname'] = 'n2oti';
-$app['user'] = 'postgres';
-$app['password'] = '32736384';
+$app['port'] = '';
+$app['dbname'] = '';
+$app['user'] = '';
+$app['password'] = '';
 
 // SECURITY
 $app['serverName'] = "localhost:8000";
