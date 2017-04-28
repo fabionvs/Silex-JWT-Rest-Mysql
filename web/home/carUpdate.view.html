@@ -1,0 +1,26 @@
+﻿<div class="col-md-8 col-md-offset-2" >
+    <div class="row">
+        <a class="btn btn-default pull-left" href="#/">Início</a>
+        <a class="btn btn-primary pull-right" href="#/login">Logout</a>
+    </div>
+    <div id="main">
+        <h2>{{cars.car.nome}}</h2>
+        <form ng-submit="myFunc(cars.car)">
+            <div class="form-group">
+                <input type="hidden" class="form-control" id="email" ng-model="cars.car.id">
+                <label for="email">Nome:</label>
+                <input type="text" class="form-control" id="email" ng-model="cars.car.nome" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Ano</label>
+                <input type="text" class="form-control" id="ano" ng-model="cars.car.ano" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Aro</label>
+                <input type="text" class="form-control" id="aro" ng-model="cars.car.aro"  required>
+            </div>
+            <button type="submit" class="btn btn-warning">Alterar</button>
+        </form>
+
+    </div>
+</div>

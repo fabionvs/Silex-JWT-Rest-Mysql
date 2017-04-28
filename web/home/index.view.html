@@ -1,0 +1,29 @@
+﻿<div class="col-md-8 col-md-offset-2" >
+    <div class="row">
+        <a class="btn btn-primary pull-right" href="#/login">Logout</a>
+    </div>
+    <div id="main">
+        <p>Meus Carros:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Aro</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="car in cars">
+                    <td>{{car.parent_id}}</td>
+                    <td>{{car.nome}}</td>
+                    <td>{{car.ano}}</td>
+                    <td>{{car.aro}}</td>
+                    <td> <a href="#/car/show/{{car.parent_id}}"><button class="btn btn-primary">Ver</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#/car/new"><button class="btn btn-block btn-success" >Adicionar Novo</button></a>
+    </div>
+</div>

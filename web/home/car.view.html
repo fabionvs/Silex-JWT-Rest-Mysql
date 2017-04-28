@@ -1,0 +1,46 @@
+﻿<div class="col-md-8 col-md-offset-2" >
+    <div class="row">
+        <a class="btn btn-default pull-left" href="#/">Início</a>
+        <a class="btn btn-primary pull-right" href="#/login">Logout</a>
+    </div>
+    <div id="main">
+        <h2>{{cars.car.nome}}</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Aro</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td>{{cars.car.parent_id}}</td>
+                    <td>{{cars.car.nome}}</td>
+                    <td>{{cars.car.ano}}</td>
+                    <td>{{cars.car.aro}}</td>
+                    <td><a href="#/car/edit/{{cars.car.parent_id}}"><button class="btn btn-warning">Editar</button></a> <a href="#/car/excluir/{{cars.car.parent_id}}"><button class="btn btn-danger">Excluir</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Peças</h2><a class="btn btn-success pull-right" href="#/parts/new/{{cars.car.parent_id}}">Adicionar Peça</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="part in cars.parts">
+                    <td>{{part.nome}}</td>
+                    <td ng-if="part.opcional == 1">Opcional</td>
+                    <td ng-if="part.opcional == 0">De Fábrica</td>
+                    <td><a href="#/parts/edit/{{part.part_id}}"><button  class="btn btn-warning">Editar</button></a> <a href="#/parts/excluir/{{part.part_id}}"><button class="btn btn-danger">Excluir</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
