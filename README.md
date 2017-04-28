@@ -19,10 +19,10 @@ Endereços para o Rest:
 Login: http://localhost:8000/api/v1/login?user=fabio&pass=123
 
 Carros:
-- Listar: /api/v1/cars/ (get) 
-- Editar: /api/v1/cars/edit/{id} (post)
-- Inserir: /api/v1/cars/new (post)
-- Deletar: /api/v1/cars/{id} (delete)
+- Listar: /api/v1/cars/ - (get) 
+- Editar: /api/v1/cars/edit/{id} - (post)
+- Inserir: /api/v1/cars/new - (post)
+- Deletar: /api/v1/cars/{id} - (delete)
 
 Parts:
 - Partes/carro:  /api/v1/parts/{carro} - (get) {carro} = Id do carro
