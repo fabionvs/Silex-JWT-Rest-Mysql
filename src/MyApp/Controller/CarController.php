@@ -11,7 +11,7 @@ class CarController {
     public function index(Application $app) {
         $conn = $app['db'];
 
-        $sql = "SELECT * FROM public.car";
+        $sql = "SELECT * FROM car";
         $cars = $conn->fetchAll($sql);
 
         return new JsonResponse(
@@ -25,7 +25,7 @@ class CarController {
         $ano = $request->get('ano');
         $aro = $request->get('aro');
         try {
-            $conn->update('public.car', array('nome' => $nome, 'ano' => $ano, 'aro' => $aro), array('parent_id' => $id));
+            $conn->update('car', array('nome' => $nome, 'ano' => $ano, 'aro' => $aro), array('parent_id' => $id));
         } catch (\Exception $e) {
             return new JsonResponse(
                     array('message' => 'Não foi!'), 500
@@ -40,11 +40,11 @@ class CarController {
     public function show(Application $app, $id) {
         $conn = $app['db'];
 
-        $sql = "SELECT * FROM public.car WHERE parent_id = ?";
+        $sql = "SELECT * FROM car WHERE parent_id = ?";
         $statement = $conn->executeQuery($sql, array($id));
         $car = $statement->fetch();
         
-        $sql = "SELECT * FROM public.parts WHERE car_id = ?";
+        $sql = "SELECT * FROM parts WHERE car_id = ?";
         $statement = $conn->executeQuery($sql, array($id));
         $parts = $statement->fetchAll();
         return new JsonResponse(
@@ -57,7 +57,7 @@ class CarController {
         $nome = $request->get('nome');
         $ano = $request->get('ano');
         $aro = $request->get('aro');
-        $conn->insert('public.car', array('nome' => $nome, 'ano' => $ano, 'aro' => $aro));
+        $conn->insert('car', array('nome' => $nome, 'ano' => $ano, 'aro' => $aro));
         try {
             
         } catch (\Exception $e) {
@@ -72,14 +72,14 @@ class CarController {
 
     public function delete(Application $app, $id) {
         $conn = $app['db'];
-        $sql = "SELECT * FROM public.parts WHERE car_id = ?";
+        $sql = "SELECT * FROM parts WHERE car_id = ?";
         $statement = $conn->executeQuery($sql, array($id));
         $parts = $statement->fetchAll();
         foreach($parts as $valor){
-             $conn->delete('public.parts', array('part_id' => $valor['part_id']));
+             $conn->delete('parts', array('part_id' => $valor['part_id']));
         }
         try {
-            $conn->delete('public.car', array('parent_id' => $id));
+            $conn->delete('car', array('parent_id' => $id));
         } catch (\Exception $e) {
             return new JsonResponse(
                     array('message' => 'Não foi!'), 500
