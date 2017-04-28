@@ -31,3 +31,6 @@ Exemplo: http://localhost:8000/api/v1/cars
 
 Se for utilizar via Postman, ou algum cliente Rest, lembre-se de usar o header:
 - "Autorization" "Bearer (TOKEN)"
+
+Requisitos:
+php >= 7.0
