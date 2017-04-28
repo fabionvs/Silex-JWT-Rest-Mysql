@@ -5,8 +5,8 @@ CREATE SEQUENCE car_sequence;
 
 CREATE TABLE car (
     parent_id integer DEFAULT nextval('car_sequence') NOT NULL,
-    nome character varying(80) NOT NULL,
-    ano character varying(4) NOT NULL,
+    nome character varchar(80) NOT NULL,
+    ano character varchar(4) NOT NULL,
     aro integer NOT NULL
 );
 
@@ -17,17 +17,17 @@ CREATE SEQUENCE parts_sequence;
 CREATE TABLE parts (
     part_id integer DEFAULT nextval('parts_sequence') NOT NULL,
     car_id integer NOT NULL,
-    nome character varying(80) NOT NULL,
+    nome character varchar(80) NOT NULL,
     opcional integer NOT NULL
 );
 
 
 
 CREATE TABLE usuario (
-    username character varying(50),
-    pass character varying(50),
+    username character varchar(50),
+    pass character varchar(50),
     id integer,
-    token character varying(500)
+    token character varchar(500)
 );
 
 
