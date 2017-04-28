@@ -15,7 +15,7 @@ class AuthenticateController {
         $conn = $app['db'];
 
         if ($username && $password) {
-            $sql = "SELECT * FROM public.usuario WHERE username = ? AND pass = ?";
+            $sql = "SELECT * FROM usuario WHERE username = ? AND pass = ?";
             $user = $conn->fetchAssoc($sql, array($username, $password));
 
             if ($user) {
@@ -46,7 +46,7 @@ class AuthenticateController {
                 $jwt = JWT::encode(
                                 $data, $secretKey, $algorithm
                 );
-                $conn->update('public.usuario', array('token' => $jwt), array('id' => $user['id']));
+                $conn->update('usuario', array('token' => $jwt), array('id' => $user['id']));
 
                 return new JsonResponse(
                         array('token' => $jwt), 200
