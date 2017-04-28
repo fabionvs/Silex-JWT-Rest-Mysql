@@ -1,4 +1,4 @@
-Projeto
+Projeto Sylex com Rest e autenticação JWT
 
 Instalação
 ------------
